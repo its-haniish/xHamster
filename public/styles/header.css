@@ -19,10 +19,26 @@ html{
   height: 100vh;
 }
 
+.red{
+  color: red;
+}
+.text-small{
+  font-size: 10px;
+}
+.gold{
+  color:orange;
+}
+.pink{
+  color:rgb(219 39 119);
+}
 body{
   width: 100%;
   height: 100%;
   background-color: var(--bg);
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 a {
@@ -46,7 +62,6 @@ button {
   align-items: center;
   padding: 5px 15px;
   width: 100%;
-  border-bottom: 1px solid var(--border);
 }
 
 #pc_nav .logo {
@@ -130,6 +145,23 @@ button {
   display: none;
 }
 
+#header_links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  width: 100%;
+  background: #000;
+}
+
+i{
+  text-align: center;
+}
+
+#header_links a:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   #pc_nav {
    display: none;
@@ -156,6 +188,17 @@ button {
   #mobile_nav ul li i {
     font-size: 20px;
     margin-right: 4px;
+  }
+  #header_links{
+    width: 100%;
+    flex-wrap: nowrap;
+  padding:0px;
+    overflow-x:scroll;
+    gap: 10px;
+  }
+  #header_links a{
+    white-space: nowrap;
+    padding:5px 10px;
   }
 }
 
